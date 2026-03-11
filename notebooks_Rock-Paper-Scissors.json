@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "id": "d44a1eef-2e0b-4d77-a5d3-244854aee314",
+      "cell_type": "code",
+      "source": "print(\"Welcome to Rock-Paper-Scissors!\")\n\nwhile True:\n    player1 = input(\"Player 1 - Enter rock, paper, or scissors: \").lower()\n    player2 = input(\"Player 2 - Enter rock, paper, or scissors: \").lower()\n\n    # Check for valid input\n    if player1 not in [\"rock\", \"paper\", \"scissors\"] or player2 not in [\"rock\", \"paper\", \"scissors\"]:\n        print(\"Invalid input. Please enter rock, paper, or scissors.\")\n        continue\n\n    # Determine winner\n    if player1 == player2:\n        print(\"It's a tie!\")\n    elif (player1 == \"rock\" and player2 == \"scissors\") or \\\n         (player1 == \"scissors\" and player2 == \"paper\") or \\\n         (player1 == \"paper\" and player2 == \"rock\"):\n        print(\"Congratulations Player 1! You win!\")\n    else:\n        print(\"Congratulations Player 2! You win!\")\n\n    # Ask to play again\n    play_again = input(\"Do you want to play again? (yes/no): \").lower()\n    if play_again != \"yes\":\n        print(\"Thanks for playing!\")\n        break",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Welcome to Rock-Paper-Scissors!\n"
+        },
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Player 1 - Enter rock, paper, or scissors:  Scissor\nPlayer 2 - Enter rock, paper, or scissors:  Rock\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Invalid input. Please enter rock, paper, or scissors.\n"
+        },
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Player 1 - Enter rock, paper, or scissors:  paper\nPlayer 2 - Enter rock, paper, or scissors:  rock\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Congratulations Player 1! You win!\n"
+        },
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "Do you want to play again? (yes/no):  yes\nPlayer 1 - Enter rock, paper, or scissors:  rock\nPlayer 2 - Enter rock, paper, or scissors:  pillow\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "Invalid input. Please enter rock, paper, or scissors.\n"
+        },
+        {
+          "ename": "<class 'AttributeError'>",
+          "evalue": "'NoneType' object has no attribute 'lower'",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mAttributeError\u001b[39m                            Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[1]\u001b[39m\u001b[32m, line 4\u001b[39m\n\u001b[32m      1\u001b[39m \u001b[38;5;28mprint\u001b[39m(\u001b[33m\"\u001b[39m\u001b[33mWelcome to Rock-Paper-Scissors!\u001b[39m\u001b[33m\"\u001b[39m)\n\u001b[32m      3\u001b[39m \u001b[38;5;28;01mwhile\u001b[39;00m \u001b[38;5;28;01mTrue\u001b[39;00m:\n\u001b[32m----> \u001b[39m\u001b[32m4\u001b[39m     player1 = \u001b[38;5;28;43minput\u001b[39;49m\u001b[43m(\u001b[49m\u001b[33;43m\"\u001b[39;49m\u001b[33;43mPlayer 1 - Enter rock, paper, or scissors: \u001b[39;49m\u001b[33;43m\"\u001b[39;49m\u001b[43m)\u001b[49m\u001b[43m.\u001b[49m\u001b[43mlower\u001b[49m()\n\u001b[32m      5\u001b[39m     player2 = \u001b[38;5;28minput\u001b[39m(\u001b[33m\"\u001b[39m\u001b[33mPlayer 2 - Enter rock, paper, or scissors: \u001b[39m\u001b[33m\"\u001b[39m).lower()\n\u001b[32m      7\u001b[39m     \u001b[38;5;66;03m# Check for valid input\u001b[39;00m\n",
+            "\u001b[31mAttributeError\u001b[39m: 'NoneType' object has no attribute 'lower'"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": 1
+    },
+    {
+      "id": "251c1bc8-8765-4031-9745-9de62861369b",
+      "cell_type": "code",
+      "source": "",
+      "metadata": {
+        "trusted": true
+      },
+      "outputs": [],
+      "execution_count": null
+    }
+  ]
+}
